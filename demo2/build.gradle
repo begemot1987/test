@@ -23,6 +23,9 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 sonarqube {
+	doFirst {
+		println System.properties['JAVA_HOME']
+	}
 	properties {
 		property "sonar.projectKey", "test"
 	}
