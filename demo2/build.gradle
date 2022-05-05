@@ -27,3 +27,13 @@ sonarqube {
 		property "sonar.projectKey", "test"
 	}
 }
+jacoco {
+	toolVersion = "0.8.6"
+	reportsDir = file("$buildDir/jacocoreports")
+}
+
+jacocoTestReport {
+	reports {
+		xml.enabled true
+	}
+}
