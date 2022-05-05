@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    dir('./TransactionService') {
+    dir('../demo') {
       sh "./gradlew sonarqube"
     }
   }
