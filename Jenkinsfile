@@ -1,5 +1,4 @@
-pipeline {
-  stages {
+node {
     stage('SCM') {
         checkout scm
       }
@@ -9,5 +8,4 @@ pipeline {
           sh "./gradlew sonarqube"
         }
       }
-  }
 }
