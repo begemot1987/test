@@ -22,11 +22,7 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-sonarqube {
-	properties {
-		property "sonar.projectKey", "test"
-	}
-}
+
 jacoco {
 	toolVersion = "0.8.6"
 	reportsDir = file("$buildDir/jacocoreports")
@@ -35,11 +31,5 @@ jacoco {
 jacocoTestReport {
 	reports {
 		xml.enabled true
-	}
-}
-
-java {
-	toolchain {
-		languageVersion.set(JavaLanguageVersion.of(11))
 	}
 }
