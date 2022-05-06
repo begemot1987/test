@@ -28,6 +28,7 @@ sonarqube {
 		property "sonar.projectKey", "TST"
 	}
 }
+
 jacoco {
 	toolVersion = "0.8.6"
 	reportsDir = file("$buildDir/jacocoreports")
@@ -36,11 +37,5 @@ jacoco {
 jacocoTestReport {
 	reports {
 		xml.enabled true
-	}
-}
-
-java {
-	toolchain {
-		languageVersion.set(JavaLanguageVersion.of(11))
 	}
 }
