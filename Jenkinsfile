@@ -1,11 +1,13 @@
-stages {
-  stage('SCM') {
-    checkout scm
-  }
-  stage('SonarQube Analysis') {
-    sh "java -version"
-    dir('./demo') {
-      sh "./gradlew sonarqube"
-    }
+pipeline {
+  stages {
+    stage('SCM') {
+        checkout scm
+      }
+      stage('SonarQube Analysis') {
+        sh "java -version"
+        dir('./demo') {
+          sh "./gradlew sonarqube"
+        }
+      }
   }
 }
